@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{hero.name}}'s Details</title>
+</head>
+<body>
+<h1>
+Welcome to {{hero.name}}'s page!
+</h1>
+<h2>
+    <ul>
+        <li><h3>{{hero.name}}'s alter ego is {{hero.alter_ego}}!</h3></li>
+        <li><h3>{{hero.name}}'s primary ability is {{hero.primary_ability}}!</h3></li>
+        <li><h3>{{hero.name}}'s secondary ability is {{hero.secondary_ability}}!</h3></li>
+        <li><h3>{{hero.name}}'s catch phrase is {{hero.catch_phrase}}!</h3></li>
+        <li><h3><button inline="true"><a href="{% url 'Superheros:edit' hero.id %}">Edit Superhero</a></button></h3></li>
+    </ul>
+</h2>
+
+</body>
+</html>
