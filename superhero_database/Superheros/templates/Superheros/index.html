@@ -13,6 +13,7 @@
     {% for superhero in all_superheros %}
     <li><h2> {{superhero.name}}</h2></li>
     <li><h3><button inline="true"><a href="{% url 'Superheros:details' superhero.id %}">Details</a></button></h3></li>
+    <li><h3><button inline="true"><a href="{% url 'Superheros:delete' superhero.id %}">Delete Superhero</a></button></h3></li>
     {% endfor %}
 </ul>
 <button><a href="{% url 'Superheros:create' %}">Create New Superhero</a></button>

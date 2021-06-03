@@ -18,6 +18,7 @@ Welcome to {{hero.name}}'s page!
         <li><h3>{{hero.name}}'s secondary ability is {{hero.secondary_ability}}!</h3></li>
         <li><h3>{{hero.name}}'s catch phrase is {{hero.catch_phrase}}!</h3></li>
         <li><h3><button inline="true"><a href="{% url 'Superheros:edit' hero.id %}">Edit Superhero</a></button></h3></li>
+        <li><h3><button inline="true"><a href="{% url 'Superheros:delete' hero.id %}">Delete Superhero</a></button></h3></li>
     </ul>
 </h2>
 

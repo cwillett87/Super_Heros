@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Superhero</title>
+</head>
+<body>
+    <h1>You are about to remove {{hero_delete_detail.name}} from the Superhero's Database</h1>
+    <h2>Are you sure?</h2>
+    <form action="{% url 'Superheros:delete' hero_delete_detail.id %}"  method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete superhero">
+    </form>
+</body>
+</html>
