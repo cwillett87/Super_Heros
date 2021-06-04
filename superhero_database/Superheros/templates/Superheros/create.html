@@ -10,16 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Create Superhero</title>
+     {% load static %}
 </head>
-<body>
-<form action="{% url 'Superheros:create' %}" method="post">
+<body style="background-image:url('{% static 'superheros/images/black-canary.jpg'%}');">
+<div class="container text-left text-white">
+<form class="text-weight-bold bg-dark p-5 mt-5" action="{% url 'Superheros:create' %}" method="post">
     {% csrf_token %}
-    Name:<input type="text" name="name" id="name"><br>
-    Alter Ego:<input type="text" name="alter_ego" id="alter_ego"><br>
-    Primary Ability:<input type="text" name="primary_ability" id="primary_ability"><br>
-    Secondary Ability:<input type="text" name="secondary_ability" id="secondary_ability"><br>
-    Catchphrase:<input type="text" name="catch_phrase" id="catch_phrase"><br>
-    <input type="submit" value="Add new Superhero">
+    <h1 class="m-5">Name:<input type="text" name="name" id="name"><br></h1>
+    <h1 class="m-5">Alter Ego:<input type="text" name="alter_ego" id="alter_ego"><br></h1>
+    <h1 class="m-5">Primary Ability:<input type="text" name="primary_ability" id="primary_ability"><br></h1>
+    <h1 class="m-5">Secondary Ability:<input type="text" name="secondary_ability" id="secondary_ability"><br></h1>
+    <h1 class="m-5">Catchphrase:<input type="text" name="catch_phrase" id="catch_phrase"><br></h1>
+    <h1 class="text-center m-5"><input type="submit" value="Add Superhero"></h1>
 </form>
+    </div>
 </body>
 </html>

@@ -15,17 +15,18 @@
 
 </head>
 <body style="background-image:url('{% static 'superheros/images/black-canary.jpg'%}');">
-
-<h1>Welcome to the Superheros Database!</h1>
-
-<ul>
-    {% for superhero in all_superheros %}
-    <li><h2> {{superhero.name}}</h2></li>
-    <li><h3><button inline="true"><a href="{% url 'Superheros:details' superhero.id %}">Details</a></button></h3></li>
-    <li><h3><button inline="true"><a href="{% url 'Superheros:delete' superhero.id %}">Delete Superhero</a></button></h3></li>
-    {% endfor %}
-</ul>
-<button><a href="{% url 'Superheros:create' %}">Create New Superhero</a></button>
-
+    <div class="container text-center text-white">
+        <h1>Welcome to the Superheros Database!</h1>
+    </div>
+    <div class="container ml-5">
+        {% for superhero in all_superheros %}
+        <h2 class=" font-weight-bold text-white  mt-3"> {{superhero.name}}</h2>
+            <button class="bg-dark" inline="true"><a class="text-white" href="{% url 'Superheros:details' superhero.id %}">Details</a></button>
+            <button class="bg-dark" inline="true"><a class="text-white" href="{% url 'Superheros:delete' superhero.id %}">Delete</a></button>
+        {% endfor %}
+    </div>
+<div class="container ml-5 mt-5">
+    <button class=" bg-dark"><a class="text-white" href="{% url 'Superheros:create' %}">Create Superhero</a></button>
+</div>
 </body>
 </html>
